@@ -1,0 +1,65 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 1500001,
+                "file_path": "results\\ppo\\StraightPath\\StraightPath-1500001.onnx",
+                "reward": -23.152498483657837,
+                "creation_time": 1724170416.7056837,
+                "auxillary_file_paths": [
+                    "results\\ppo\\StraightPath\\StraightPath-1500001.pt"
+                ]
+            },
+            {
+                "steps": 1512115,
+                "file_path": "results\\ppo\\StraightPath\\StraightPath-1512115.onnx",
+                "reward": -128.43999552726746,
+                "creation_time": 1724170967.1453674,
+                "auxillary_file_paths": [
+                    "results\\ppo\\StraightPath\\StraightPath-1512115.pt"
+                ]
+            },
+            {
+                "steps": 1600036,
+                "file_path": "results\\ppo\\StraightPath\\StraightPath-1600036.onnx",
+                "reward": -127.1350015103817,
+                "creation_time": 1724172327.2454238,
+                "auxillary_file_paths": [
+                    "results\\ppo\\StraightPath\\StraightPath-1600036.pt"
+                ]
+            },
+            {
+                "steps": 1999965,
+                "file_path": "results\\ppo\\StraightPath\\StraightPath-1999965.onnx",
+                "reward": -131.19333189725876,
+                "creation_time": 1724212575.5136645,
+                "auxillary_file_paths": [
+                    "results\\ppo\\StraightPath\\StraightPath-1999965.pt"
+                ]
+            },
+            {
+                "steps": 2000029,
+                "file_path": "results\\ppo\\StraightPath\\StraightPath-2000029.onnx",
+                "reward": -131.19333189725876,
+                "creation_time": 1724212575.6007633,
+                "auxillary_file_paths": [
+                    "results\\ppo\\StraightPath\\StraightPath-2000029.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2000029,
+            "file_path": "results\\ppo\\StraightPath.onnx",
+            "reward": -131.19333189725876,
+            "creation_time": 1724212575.6007633,
+            "auxillary_file_paths": [
+                "results\\ppo\\StraightPath\\StraightPath-2000029.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}

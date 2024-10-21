@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1724861397",
+        "python_version": "3.8.19 (default, Mar 20 2024, 11:17:09) [MSC v.1900 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Kavitha\\BR-88\\Assets\\mlagents_env2\\Scripts\\mlagents-learn --run-id=multicar_straight_line_v2 --resume",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.4.0+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1724861460"
+    },
+    "total": 63.069673900000005,
+    "count": 1,
+    "self": 0.011512800000012646,
+    "children": {
+        "run_training.setup": {
+            "total": 0.19901389999999886,
+            "count": 1,
+            "self": 0.19901389999999886
+        },
+        "TrainerController.start_learning": {
+            "total": 62.859147199999995,
+            "count": 1,
+            "self": 0.000210299999992003,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 62.8588936,
+                    "count": 1,
+                    "self": 62.8588936
+                },
+                "TrainerController._save_models": {
+                    "total": 4.3300000001522676e-05,
+                    "count": 1,
+                    "self": 4.3300000001522676e-05
+                }
+            }
+        }
+    }
+}

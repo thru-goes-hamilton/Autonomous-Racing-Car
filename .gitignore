@@ -1,0 +1,38 @@
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Unity generated files
+Library/
+Logs/
+Temp/
+Build Output/
+UserSettings/
+
+# Ignore virtual environment inside Assets
+Assets/mlagents_env2/
+
+# Visual Studio generated files
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Auto-generated files from Unity
+Assembly-CSharp*
+
+# Ignore specific Unity temporary files
+*.pidb
+*.booproj
+*.unityproj
+
+# Ignore crash reports, settings, and temp files
+*.swp
+*.tmp
+*.temp
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db

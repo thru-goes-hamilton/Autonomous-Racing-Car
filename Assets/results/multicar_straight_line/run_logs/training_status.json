@@ -1,0 +1,65 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 2540112,
+                "file_path": "results\\multicar_straight_line\\StraightPath\\StraightPath-2540112.onnx",
+                "reward": -433.3333657880624,
+                "creation_time": 1724614366.1987789,
+                "auxillary_file_paths": [
+                    "results\\multicar_straight_line\\StraightPath\\StraightPath-2540112.pt"
+                ]
+            },
+            {
+                "steps": 3080112,
+                "file_path": "results\\multicar_straight_line\\StraightPath\\StraightPath-3080112.onnx",
+                "reward": -666.6667411029339,
+                "creation_time": 1724616812.9137602,
+                "auxillary_file_paths": [
+                    "results\\multicar_straight_line\\StraightPath\\StraightPath-3080112.pt"
+                ]
+            },
+            {
+                "steps": 3620112,
+                "file_path": "results\\multicar_straight_line\\StraightPath\\StraightPath-3620112.onnx",
+                "reward": -333.3333612382412,
+                "creation_time": 1724661832.23035,
+                "auxillary_file_paths": [
+                    "results\\multicar_straight_line\\StraightPath\\StraightPath-3620112.pt"
+                ]
+            },
+            {
+                "steps": 4160112,
+                "file_path": "results\\multicar_straight_line\\StraightPath\\StraightPath-4160112.onnx",
+                "reward": -433.33337087432545,
+                "creation_time": 1724681938.8645604,
+                "auxillary_file_paths": [
+                    "results\\multicar_straight_line\\StraightPath\\StraightPath-4160112.pt"
+                ]
+            },
+            {
+                "steps": 4700112,
+                "file_path": "results\\multicar_straight_line\\StraightPath\\StraightPath-4700112.onnx",
+                "reward": -333.3333612382412,
+                "creation_time": 1724690586.4499571,
+                "auxillary_file_paths": [
+                    "results\\multicar_straight_line\\StraightPath\\StraightPath-4700112.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4700112,
+            "file_path": "results\\multicar_straight_line\\StraightPath.onnx",
+            "reward": -333.3333612382412,
+            "creation_time": 1724690586.4499571,
+            "auxillary_file_paths": [
+                "results\\multicar_straight_line\\StraightPath\\StraightPath-4700112.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}
