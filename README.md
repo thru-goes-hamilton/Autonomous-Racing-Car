@@ -6,7 +6,7 @@ This is hobby project where I built an RC car from scratch to train it to race a
 For racing autonomously, it leverages the values from 3 distance sensors(VL530Lx ToF sensors)  and uses a neural network to predict an action for throttle and steering. The car has been modelled in Blender and Unity to accurately replicate real world physics. WheelColliders are used for the replicating the car physics.
 
 ### Training
-The car is trained using Reinforcement Learning (Proximal Policy Optimization). The neural network has 2 hiden layers with 128 neurons each. The best model is trained for 32500000 steps.
+The car is trained using Reinforcement Learning (Proximal Policy Optimization). The neural network has 2 hiden layers with 128 neurons each. The best model is trained for 32500000 steps. For more details about the model, checkout Assets/config.yaml.
 
 
 https://github.com/user-attachments/assets/17f142e5-821e-44fd-89d5-e9550f1c0187
