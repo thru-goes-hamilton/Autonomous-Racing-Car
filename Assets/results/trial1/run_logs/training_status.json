@@ -2,24 +2,6 @@
     "StraightPath": {
         "checkpoints": [
             {
-                "steps": 18337238,
-                "file_path": "results\\trial1\\StraightPath\\StraightPath-18337238.onnx",
-                "reward": null,
-                "creation_time": 1729155834.5996509,
-                "auxillary_file_paths": [
-                    "results\\trial1\\StraightPath\\StraightPath-18337238.pt"
-                ]
-            },
-            {
-                "steps": 26690119,
-                "file_path": "results\\trial1\\StraightPath\\StraightPath-26690119.onnx",
-                "reward": null,
-                "creation_time": 1729171140.9431129,
-                "auxillary_file_paths": [
-                    "results\\trial1\\StraightPath\\StraightPath-26690119.pt"
-                ]
-            },
-            {
                 "steps": 29999992,
                 "file_path": "results\\trial1\\StraightPath\\StraightPath-29999992.onnx",
                 "reward": null,
@@ -45,15 +27,33 @@
                 "auxillary_file_paths": [
                     "results\\trial1\\StraightPath\\StraightPath-30152232.pt"
                 ]
+            },
+            {
+                "steps": 49999977,
+                "file_path": "results\\trial1\\StraightPath\\StraightPath-49999977.onnx",
+                "reward": null,
+                "creation_time": 1730086159.1964333,
+                "auxillary_file_paths": [
+                    "results\\trial1\\StraightPath\\StraightPath-49999977.pt"
+                ]
+            },
+            {
+                "steps": 50000169,
+                "file_path": "results\\trial1\\StraightPath\\StraightPath-50000169.onnx",
+                "reward": null,
+                "creation_time": 1730086159.2644536,
+                "auxillary_file_paths": [
+                    "results\\trial1\\StraightPath\\StraightPath-50000169.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 30152232,
+            "steps": 50000169,
             "file_path": "results\\trial1\\StraightPath.onnx",
-            "reward": -32728.57678934733,
-            "creation_time": 1729182504.9927301,
+            "reward": null,
+            "creation_time": 1730086159.2644536,
             "auxillary_file_paths": [
-                "results\\trial1\\StraightPath\\StraightPath-30152232.pt"
+                "results\\trial1\\StraightPath\\StraightPath-50000169.pt"
             ]
         }
     },
