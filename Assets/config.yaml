@@ -14,9 +14,9 @@ behaviors:
       beta_schedule: linear
       epsilon_schedule: linear
     network_settings:
-      normalize: False
+      normalize: True
       hidden_units: 128
-      num_layers: 2
+      num_layers: 4
       vis_encode_type: simple
       memory: null  
       goal_conditioning_type: hyper
@@ -27,10 +27,10 @@ behaviors:
         strength: 1.0
     init_path: null  
     keep_checkpoints: 5
-    checkpoint_interval: 50000000
-    max_steps: 50000000
+    checkpoint_interval: 50000
+    max_steps: 1000000
     time_horizon: 64
-    summary_freq: 50000
+    summary_freq: 5000
     threaded: False
     self_play: null  
     behavioral_cloning: null  

@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1732621421",
+        "python_version": "3.8.19 (default, Mar 20 2024, 11:17:09) [MSC v.1900 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Kavitha\\BR-88\\Assets\\mlagents_env2\\Scripts\\mlagents-learn config.yaml --run-id=RC_Car_Training",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.4.0+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1732621515"
+    },
+    "total": 94.70005979999999,
+    "count": 1,
+    "self": 0.7959623999999934,
+    "children": {
+        "run_training.setup": {
+            "total": 3.102340399999999,
+            "count": 1,
+            "self": 3.102340399999999
+        },
+        "TrainerController.start_learning": {
+            "total": 90.801757,
+            "count": 1,
+            "self": 0.06000009999999634,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 90.717817,
+                    "count": 1,
+                    "self": 90.717817
+                },
+                "TrainerController._save_models": {
+                    "total": 0.023939900000002012,
+                    "count": 1,
+                    "self": 0.023939900000002012
+                }
+            }
+        }
+    }
+}

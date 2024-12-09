@@ -4,6 +4,7 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.IO;
 
 public class MultiCarAgent : Agent
 {
@@ -79,8 +80,50 @@ public class MultiCarAgent : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        // Collect observations from RayPerception3D sensor
-        // Assuming you have set up a RayPerceptionSensorComponent3D in the Unity Inspector
+        // Access the RayPerceptionSensorComponent3D
+        RayPerceptionSensorComponent3D raySensor = GetComponentInChildren<RayPerceptionSensorComponent3D>();
+
+        if (raySensor != null)
+        {
+            // Get raw observations from the RayPerception sensor
+            var rayPerceptionData = raySensor.GetRayPerceptionInput();
+            var rayOutputs = RayPerceptionSensor.Perceive(rayPerceptionData);
+
+            List<float> observations = new List<float>();
+
+            int rayNo = 1; // Ray number for logging
+            foreach (var rayOutput in rayOutputs.RayOutputs)
+            {
+                // Print the Ray number along with its HitFraction (distance)
+                Debug.Log($"Ray {rayNo} HitFraction: {rayOutput.HitFraction}");
+
+                // Add the HitFraction (distance) to the observations list
+                observations.Add(rayOutput.HitFraction);
+
+                // Increment ray number for the next iteration
+                rayNo++;
+            }
+            // After the loop, print all ray distances collectively
+            Debug.Log($"All Ray Distances: {string.Join(", ", observations)}");
+
+            // Add all observations to the sensor
+            sensor.AddObservation(observations.ToArray());
+
+            
+            // Extract only the distances from the rays
+            // foreach (var rayOutput in rayOutputs.RayOutputs)
+            // {
+            //     Debug.Log($"Ray HitFraction: {rayOutput.HitFraction}");
+            //     string logText = $"Ray HitFraction: {rayOutput.HitFraction}";
+            //     File.AppendAllText("observations_log.txt", logText + "\n");
+            //     sensor.AddObservation(rayOutput.HitFraction); // Distance (0 to 1) or 1 if no hit
+            // }
+
+        }
+        else
+        {
+            Debug.LogError("RayPerceptionSensor3D component not found!");
+        }
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -116,7 +159,7 @@ public class MultiCarAgent : Agent
 
         // Apply speed reward and time penalty
         float currentSpeed = rigidBody.velocity.magnitude;
-        AddReward(10*currentSpeed - 10f); // +1 * speed - 1 per time step
+        AddReward(10 * currentSpeed - 10f); // +1 * speed - 1 per time step
 
         if (isLastCheckpointCrossed)
         {
@@ -202,7 +245,7 @@ public class MultiCarAgent : Agent
         {
             // Convert slider values to continuous actions
             continuousActionsOut[0] = steeringSlider.value;
-            continuousActionsOut[1] = throttleSlider.value; 
+            continuousActionsOut[1] = throttleSlider.value;
         }
         else
         {
