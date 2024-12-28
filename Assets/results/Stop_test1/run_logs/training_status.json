@@ -1,0 +1,56 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 27840,
+                "file_path": "results\\Stop_test1\\StraightPath\\StraightPath-27840.onnx",
+                "reward": null,
+                "creation_time": 1735412812.4449606,
+                "auxillary_file_paths": [
+                    "results\\Stop_test1\\StraightPath\\StraightPath-27840.pt"
+                ]
+            },
+            {
+                "steps": 49152,
+                "file_path": "results\\Stop_test1\\StraightPath\\StraightPath-49152.onnx",
+                "reward": null,
+                "creation_time": 1735413226.901352,
+                "auxillary_file_paths": [
+                    "results\\Stop_test1\\StraightPath\\StraightPath-49152.pt"
+                ]
+            },
+            {
+                "steps": 49984,
+                "file_path": "results\\Stop_test1\\StraightPath\\StraightPath-49984.onnx",
+                "reward": null,
+                "creation_time": 1735413495.2697437,
+                "auxillary_file_paths": [
+                    "results\\Stop_test1\\StraightPath\\StraightPath-49984.pt"
+                ]
+            },
+            {
+                "steps": 72576,
+                "file_path": "results\\Stop_test1\\StraightPath\\StraightPath-72576.onnx",
+                "reward": null,
+                "creation_time": 1735413587.4837282,
+                "auxillary_file_paths": [
+                    "results\\Stop_test1\\StraightPath\\StraightPath-72576.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 72576,
+            "file_path": "results\\Stop_test1\\StraightPath.onnx",
+            "reward": null,
+            "creation_time": 1735413587.4837282,
+            "auxillary_file_paths": [
+                "results\\Stop_test1\\StraightPath\\StraightPath-72576.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}

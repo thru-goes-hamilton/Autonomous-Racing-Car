@@ -16,8 +16,6 @@ public class MultiCarAgent : Agent
     public Transform[] checkpoints;
     private int currentCheckpoint = 0;
 
-    private float timeSinceLastCheckpoint = 0f;
-
     private float timeSinceLastZero = 0f;
     private bool isLastCheckpointCrossed = false;
     private float stopReward = 200f;
@@ -58,7 +56,6 @@ public class MultiCarAgent : Agent
     public override void OnEpisodeBegin()
     {
         isLastCheckpointCrossed = false;
-        timeSinceLastCheckpoint = 0f;
         ResetCar();
     }
 
@@ -97,7 +94,7 @@ public class MultiCarAgent : Agent
             foreach (var rayOutput in rayOutputs.RayOutputs)
             {
                 // Print the Ray number along with its HitFraction (distance)
-                Debug.Log($"Ray {rayNo} HitFraction: {rayOutput.HitFraction}");
+                // Debug.Log($"Ray {rayNo} HitFraction: {rayOutput.HitFraction}");
 
                 // Add the HitFraction (distance) to the observations list
                 observations.Add(rayOutput.HitFraction);
@@ -201,6 +198,7 @@ public class MultiCarAgent : Agent
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            Debug.Log("Collision with wall!");
             if (Time.time - lastWallCollisionTime > 0.5f) // Prevent multiple penalties for the same collision
             {
                 AddReward(-100f);
@@ -212,8 +210,10 @@ public class MultiCarAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("checkpoint"))
         {
+            Debug.Log($"Crossed checkpoint: {currentCheckpoint}");
             if (checkpoints[currentCheckpoint].gameObject == other.gameObject)
             {
                 float reward = 150f;
@@ -228,7 +228,6 @@ public class MultiCarAgent : Agent
                 if (currentCheckpoint >= checkpoints.Length)
                 {
                     isLastCheckpointCrossed = true;
-                    timeSinceLastCheckpoint = 0f;
                     AddReward(1000f);
                 }
                 else
