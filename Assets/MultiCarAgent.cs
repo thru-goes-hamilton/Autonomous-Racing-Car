@@ -17,6 +17,8 @@ public class MultiCarAgent : Agent
     private int currentCheckpoint = 0;
 
     private float timeSinceLastCheckpoint = 0f;
+
+    private float timeSinceLastZero = 0f;
     private bool isLastCheckpointCrossed = false;
     private float stopReward = 200f;
 
@@ -158,33 +160,32 @@ public class MultiCarAgent : Agent
         }
 
         // Apply speed reward and time penalty
-        float currentSpeed = rigidBody.velocity.magnitude;
-        AddReward(10 * currentSpeed - 10f); // +1 * speed - 1 per time step
+        float currentSpeed = rigidBody.velocity.magnitude;        
 
         if (isLastCheckpointCrossed)
         {
-            timeSinceLastCheckpoint += Time.fixedDeltaTime;
+            AddReward(-10 * currentSpeed - 10f);
 
-            if (timeSinceLastCheckpoint > 5f)
+            if (currentSpeed == 0f)
             {
-                // If speed is close to 0, reward for stopping
-                if (currentSpeed < 0.1f)
-                {
-                    AddReward(stopReward);
+                AddReward(stopReward);
+                timeSinceLastZero +=Time.fixedDeltaTime;
+                if(timeSinceLastZero>5){
+                    AddReward(stopReward*100);
+                    EndEpisode();
                 }
-                EndEpisode();
+
             }
-            else if (currentSpeed < 0.1f)
+            else
             {
-                // Reward for stopping within 5 seconds
-                AddReward(stopReward + (5f - timeSinceLastCheckpoint) * 20f);
-                ResetCar();
+                timeSinceLastZero = 0;
             }
         }
         else
         {
-            timeSinceLastCheckpoint = 0f;
+            AddReward(10 * currentSpeed - 10f); // +1 * speed - 1 per time step
         }
+
     }
 
     float CalculateRequiredTorque(float targetAngularVelocity)

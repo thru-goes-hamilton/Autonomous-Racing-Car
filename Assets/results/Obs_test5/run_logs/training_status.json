@@ -1,0 +1,65 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 849937,
+                "file_path": "results\\Obs_test5\\StraightPath\\StraightPath-849937.onnx",
+                "reward": null,
+                "creation_time": 1735405841.526783,
+                "auxillary_file_paths": [
+                    "results\\Obs_test5\\StraightPath\\StraightPath-849937.pt"
+                ]
+            },
+            {
+                "steps": 899985,
+                "file_path": "results\\Obs_test5\\StraightPath\\StraightPath-899985.onnx",
+                "reward": null,
+                "creation_time": 1735406030.4184043,
+                "auxillary_file_paths": [
+                    "results\\Obs_test5\\StraightPath\\StraightPath-899985.pt"
+                ]
+            },
+            {
+                "steps": 949937,
+                "file_path": "results\\Obs_test5\\StraightPath\\StraightPath-949937.onnx",
+                "reward": null,
+                "creation_time": 1735406220.9395676,
+                "auxillary_file_paths": [
+                    "results\\Obs_test5\\StraightPath\\StraightPath-949937.pt"
+                ]
+            },
+            {
+                "steps": 999985,
+                "file_path": "results\\Obs_test5\\StraightPath\\StraightPath-999985.onnx",
+                "reward": null,
+                "creation_time": 1735406415.46592,
+                "auxillary_file_paths": [
+                    "results\\Obs_test5\\StraightPath\\StraightPath-999985.pt"
+                ]
+            },
+            {
+                "steps": 1000017,
+                "file_path": "results\\Obs_test5\\StraightPath\\StraightPath-1000017.onnx",
+                "reward": -31904.938594818115,
+                "creation_time": 1735406415.5214314,
+                "auxillary_file_paths": [
+                    "results\\Obs_test5\\StraightPath\\StraightPath-1000017.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000017,
+            "file_path": "results\\Obs_test5\\StraightPath.onnx",
+            "reward": -31904.938594818115,
+            "creation_time": 1735406415.5214314,
+            "auxillary_file_paths": [
+                "results\\Obs_test5\\StraightPath\\StraightPath-1000017.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}
