@@ -1,0 +1,56 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 999987,
+                "file_path": "results\\multicar_test3\\StraightPath\\StraightPath-999987.onnx",
+                "reward": 17925.30860573905,
+                "creation_time": 1755026993.2674878,
+                "auxillary_file_paths": [
+                    "results\\multicar_test3\\StraightPath\\StraightPath-999987.pt"
+                ]
+            },
+            {
+                "steps": 1999975,
+                "file_path": "results\\multicar_test3\\StraightPath\\StraightPath-1999975.onnx",
+                "reward": 23034.396360698498,
+                "creation_time": 1755028127.903567,
+                "auxillary_file_paths": [
+                    "results\\multicar_test3\\StraightPath\\StraightPath-1999975.pt"
+                ]
+            },
+            {
+                "steps": 2999942,
+                "file_path": "results\\multicar_test3\\StraightPath\\StraightPath-2999942.onnx",
+                "reward": 22674.538010432803,
+                "creation_time": 1755029394.7205594,
+                "auxillary_file_paths": [
+                    "results\\multicar_test3\\StraightPath\\StraightPath-2999942.pt"
+                ]
+            },
+            {
+                "steps": 3000815,
+                "file_path": "results\\multicar_test3\\StraightPath\\StraightPath-3000815.onnx",
+                "reward": null,
+                "creation_time": 1755029396.1703627,
+                "auxillary_file_paths": [
+                    "results\\multicar_test3\\StraightPath\\StraightPath-3000815.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3000815,
+            "file_path": "results\\multicar_test3\\StraightPath.onnx",
+            "reward": null,
+            "creation_time": 1755029396.1703627,
+            "auxillary_file_paths": [
+                "results\\multicar_test3\\StraightPath\\StraightPath-3000815.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}

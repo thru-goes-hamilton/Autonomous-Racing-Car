@@ -1,0 +1,47 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 49996,
+                "file_path": "results\\multicar_test2\\StraightPath\\StraightPath-49996.onnx",
+                "reward": -1584.6645464897156,
+                "creation_time": 1755024730.1940336,
+                "auxillary_file_paths": [
+                    "results\\multicar_test2\\StraightPath\\StraightPath-49996.pt"
+                ]
+            },
+            {
+                "steps": 99991,
+                "file_path": "results\\multicar_test2\\StraightPath\\StraightPath-99991.onnx",
+                "reward": -1665.1958222565827,
+                "creation_time": 1755024840.638543,
+                "auxillary_file_paths": [
+                    "results\\multicar_test2\\StraightPath\\StraightPath-99991.pt"
+                ]
+            },
+            {
+                "steps": 100055,
+                "file_path": "results\\multicar_test2\\StraightPath\\StraightPath-100055.onnx",
+                "reward": -1665.1958222565827,
+                "creation_time": 1755024840.6842947,
+                "auxillary_file_paths": [
+                    "results\\multicar_test2\\StraightPath\\StraightPath-100055.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 100055,
+            "file_path": "results\\multicar_test2\\StraightPath.onnx",
+            "reward": -1665.1958222565827,
+            "creation_time": 1755024840.6842947,
+            "auxillary_file_paths": [
+                "results\\multicar_test2\\StraightPath\\StraightPath-100055.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}

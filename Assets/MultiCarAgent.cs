@@ -103,7 +103,7 @@ public class MultiCarAgent : Agent
                 rayNo++;
             }
             // After the loop, print all ray distances collectively
-            Debug.Log($"All Ray Distances: {string.Join(", ", observations)}");
+            // Debug.Log($"All Ray Distances: {string.Join(", ", observations)}");
 
             // Add all observations to the sensor
             sensor.AddObservation(observations.ToArray());
@@ -161,14 +161,21 @@ public class MultiCarAgent : Agent
 
         if (isLastCheckpointCrossed)
         {
-            AddReward(-10 * currentSpeed - 10f);
+            float penalty = -10 * currentSpeed - 10f;
+            AddReward(penalty);
+            Debug.Log($"[REWARD] Added: {penalty:F2} | Reason: Penalty after last checkpoint while moving | Total: {GetCumulativeReward():F2}");
 
-            if (currentSpeed == 0f)
+            if (currentSpeed < 1f)
             {
                 AddReward(stopReward);
-                timeSinceLastZero +=Time.fixedDeltaTime;
-                if(timeSinceLastZero>5){
-                    AddReward(stopReward*100);
+                Debug.Log($"[REWARD] Added: {stopReward:F2} | Reason: Stopped after last checkpoint | Total: {GetCumulativeReward():F2}");
+
+                timeSinceLastZero += Time.fixedDeltaTime;
+                if (timeSinceLastZero > 5)
+                {
+                    float bonus = stopReward * 100;
+                    AddReward(bonus);
+                    Debug.Log($"[REWARD] Added: {bonus:F2} | Reason: Stayed stopped for >5s after last checkpoint | Total: {GetCumulativeReward():F2}");
                     EndEpisode();
                 }
 
@@ -180,9 +187,10 @@ public class MultiCarAgent : Agent
         }
         else
         {
-            AddReward(10 * currentSpeed - 10f); // +1 * speed - 1 per time step
+            float moveReward = 10 * currentSpeed - 0f;
+            AddReward(moveReward);
+            Debug.Log($"[REWARD] Added: {moveReward:F2} | Reason: Movement during race | Total: {GetCumulativeReward():F2}");
         }
-
     }
 
     float CalculateRequiredTorque(float targetAngularVelocity)
@@ -202,8 +210,10 @@ public class MultiCarAgent : Agent
             if (Time.time - lastWallCollisionTime > 0.5f) // Prevent multiple penalties for the same collision
             {
                 AddReward(-100f);
+                Debug.Log($"[REWARD] Added: {-100f:F2} | Reason: Wall collision | Total: {GetCumulativeReward():F2}");
                 lastWallCollisionTime = Time.time;
-                ResetCar();
+
+                EndEpisode();
             }
         }
     }
@@ -222,6 +232,7 @@ public class MultiCarAgent : Agent
                 else if (currentCheckpoint == 3) reward = 300f;
 
                 AddReward(reward);
+                Debug.Log($"[REWARD] Added: {reward:F2} | Reason: Checkpoint {currentCheckpoint} crossed | Total: {GetCumulativeReward():F2}");
                 other.gameObject.SetActive(false);
                 currentCheckpoint++;
 
@@ -229,6 +240,7 @@ public class MultiCarAgent : Agent
                 {
                     isLastCheckpointCrossed = true;
                     AddReward(1000f);
+                    Debug.Log($"[REWARD] Added: {1000f:F2} | Reason: Finished race | Total: {GetCumulativeReward():F2}");
                 }
                 else
                 {

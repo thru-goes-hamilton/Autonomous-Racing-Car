@@ -1,0 +1,65 @@
+{
+    "StraightPath": {
+        "checkpoints": [
+            {
+                "steps": 6976,
+                "file_path": "results\\multicar_test1\\StraightPath\\StraightPath-6976.onnx",
+                "reward": null,
+                "creation_time": 1755024154.8318515,
+                "auxillary_file_paths": [
+                    "results\\multicar_test1\\StraightPath\\StraightPath-6976.pt"
+                ]
+            },
+            {
+                "steps": 7936,
+                "file_path": "results\\multicar_test1\\StraightPath\\StraightPath-7936.onnx",
+                "reward": null,
+                "creation_time": 1755024156.614793,
+                "auxillary_file_paths": [
+                    "results\\multicar_test1\\StraightPath\\StraightPath-7936.pt"
+                ]
+            },
+            {
+                "steps": 8960,
+                "file_path": "results\\multicar_test1\\StraightPath\\StraightPath-8960.onnx",
+                "reward": null,
+                "creation_time": 1755024158.3651073,
+                "auxillary_file_paths": [
+                    "results\\multicar_test1\\StraightPath\\StraightPath-8960.pt"
+                ]
+            },
+            {
+                "steps": 9984,
+                "file_path": "results\\multicar_test1\\StraightPath\\StraightPath-9984.onnx",
+                "reward": null,
+                "creation_time": 1755024160.4994352,
+                "auxillary_file_paths": [
+                    "results\\multicar_test1\\StraightPath\\StraightPath-9984.pt"
+                ]
+            },
+            {
+                "steps": 10176,
+                "file_path": "results\\multicar_test1\\StraightPath\\StraightPath-10176.onnx",
+                "reward": null,
+                "creation_time": 1755024160.5428019,
+                "auxillary_file_paths": [
+                    "results\\multicar_test1\\StraightPath\\StraightPath-10176.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 10176,
+            "file_path": "results\\multicar_test1\\StraightPath.onnx",
+            "reward": null,
+            "creation_time": 1755024160.5428019,
+            "auxillary_file_paths": [
+                "results\\multicar_test1\\StraightPath\\StraightPath-10176.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.4.0+cpu"
+    }
+}
